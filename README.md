@@ -1,1 +1,1 @@
-# wdard0.github.io
+pakyo ka pre alam ko na mag domain
