@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eduardo Valdez Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1f1f2f;
+      color: #fff;
+    }
+
+    header {
+      background: #29293d;
+      padding: 40px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: orange;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 10%;
+      background: linear-gradient(to bottom, #2e2e4d, #1f1f2f);
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      color: #00ffcc;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: #ccc;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .hero button {
+      background: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      margin-top: 20px;
+      font-size: 16px;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    .documents-section {
+      padding: 60px 10%;
+      background: #181828;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      color: #ff4d4d;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #aaa;
+    }
+
+    .documents-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .document-category {
+      margin-bottom: 40px;
+    }
+
+    .document-category h3 {
+      color: #00ffcc;
+      font-size: 24px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #333;
+    }
+
+    .document-item {
+      background: #29293d;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .document-info {
+      flex: 1;
+    }
+
+    .document-info h4 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .document-info p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .view-btn {
+      background: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .view-btn:hover {
+      background: #ff3333;
+    }
+
+    .file-icon {
+      margin-right: 8px;
+    }
+
+    .video-player {
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">DizMe</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Service</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </nav>
+    <button>Download CV</button>
+  </header>
+
+  <section class="hero">
+    <h1>My Portfolio Documents</h1>
+    <h2>Professional Files for Viewing</h2>
+    <p>Below you'll find all my professional documents including resume, application letter, and video presentation.</p>
+  </section>
+
+  <section class="documents-section">
+    <div class="section-title">
+      <h2>My Portfolio Files</h2>
+      <p>View my professional documents and media files</p>
+    </div>
+
+    <div class="documents-list">
+      <div class="document-category">
+        <h3>Video Presentation</h3>
+        <div class="video-player">
+          <video width="100%" controls>
+            <source src="https://yourdomain.com/VALDEZ_EDUARDO.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <div class="document-category">
+        <h3>Resume & Application</h3>
+
+        <div class="document-item">
+          <div class="document-info">
+            <h4>Resume_Valdez.docx</h4>
+            <p>My complete professional resume in Word format</p>
+          </div>
+          <a href="https://view.officeapps.live.com/op/view.aspx?src=https://yourdomain.com/Resume_Valdez.docx" target="_blank" class="view-btn">
+            <i class="fas fa-eye file-icon"></i> View
+          </a>
+        </div>
+
+        <div class="document-item">
+          <div class="document-info">
+            <h4>Valdez_ApplicationLetter.docx</h4>
+            <p>My professional application letter in Word format</p>
+          </div>
+          <a href="https://view.officeapps.live.com/op/view.aspx?src=https://yourdomain.com/Valdez_ApplicationLetter.docx" target="_blank" class="view-btn">
+            <i class="fas fa-eye file-icon"></i> View
+          </a>
+        </div>
+      </div>
+
+      <div class="document-category">
+        <h3>Presentations</h3>
+
+        <div class="document-item">
+          <div class="document-info">
+            <h4>Other-Aspects-of-Personality.pptx</h4>
+            <p>Presentation about personality aspects (15 slides)</p>
+          </div>
+          <a href="https://view.officeapps.live.com/op/view.aspx?src=https://yourdomain.com/Other-Aspects-of-Personality.pptx" target="_blank" class="view-btn">
+            <i class="fas fa-eye file-icon"></i> View
+          </a>
+        </div>
+
+        <div class="document-item">
+          <div class="document-info">
+            <h4>My_Portfolio_Presentation.pptx</h4>
+            <p>My complete portfolio presentation (20 slides)</p>
+          </div>
+          <a href="https://view.officeapps.live.com/op/view.aspx?src=https://yourdomain.com/My_Portfolio_Presentation.pptx" target="_blank" class="view-btn">
+            <i class="fas fa-eye file-icon"></i> View
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
