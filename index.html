@@ -18,10 +18,10 @@
       font-family: 'Poppins', sans-serif;
       background-color: #1f1f2f;
       color: #fff;
-      overflow-x: hidden;
+      overflow-x: hidden; /* Prevents horizontal scroll */
     }
 
-    /* Header */
+    /* --- Header --- */
     header {
       background: #29293d;
       padding: 20px 10%;
@@ -53,10 +53,10 @@
       color: #ff4d4d;
     }
 
-    /* Hero Section */
+    /* --- Hero Section --- */
     .hero {
       text-align: center;
-      padding: 100px 10%;
+      padding: 120px 10%;
       background: linear-gradient(to bottom, #2e2e4d, #1f1f2f);
     }
 
@@ -79,7 +79,7 @@
       line-height: 1.6;
     }
 
-    /* About Section */
+    /* --- About Section --- */
     .about-section {
       display: flex;
       align-items: center;
@@ -118,9 +118,10 @@
     .about-text p {
       color: #ccc;
       margin-bottom: 15px;
+      line-height: 1.6;
     }
 
-    /* Skills Section */
+    /* --- Skills Section --- */
     .section-title {
       text-align: center;
       font-size: 36px;
@@ -164,7 +165,7 @@
       font-size: 14px;
     }
 
-    /* Hobbies Section */
+    /* --- Hobbies Section --- */
     .hobbies-section {
       padding: 60px 10%;
       background: #1f1f2f;
@@ -185,9 +186,14 @@
       border-radius: 10px;
       color: #00ffcc;
       font-weight: bold;
+      transition: background 0.3s;
+    }
+    
+    .hobby-item:hover {
+      background: #3e3e5d;
     }
 
-    /* Contact Section */
+    /* --- Contact Section (Updated for Uniformity) --- */
     .contact-section {
       padding: 60px 10%;
       background: #10101a;
@@ -198,30 +204,46 @@
       margin-top: 30px;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 15px;
       align-items: center;
     }
 
+    /* Uniform Style for ALL contact items (FB, Email, Address) */
     .contact-link {
       display: flex;
       align-items: center;
-      gap: 10px;
-      color: #fff;
-      text-decoration: none;
-      font-size: 18px;
-      background: #333;
-      padding: 15px 30px;
+      justify-content: center; /* Centers text inside */
+      gap: 15px;
+      
+      /* Fixed Width for uniformity */
+      width: 100%;
+      max-width: 400px;
+      padding: 15px 20px;
+      
+      background: #202030;
+      color: #ffffff;
+      border: 1px solid #333;
       border-radius: 50px;
-      width: fit-content;
-      transition: background 0.3s;
-    }
-
-    .contact-link:hover {
-      background: #ff4d4d;
+      
+      text-decoration: none;
+      font-size: 16px;
+      transition: all 0.3s ease;
     }
 
     .contact-link i {
-      font-size: 24px;
+      font-size: 20px;
+      color: #ff4d4d; /* Red Icon */
+    }
+
+    /* Hover effects for clickable links */
+    a.contact-link:hover {
+      background: #ff4d4d;
+      border-color: #ff4d4d;
+      transform: translateY(-3px);
+    }
+    
+    a.contact-link:hover i {
+      color: #fff;
     }
 
     footer {
@@ -238,9 +260,11 @@
         flex-direction: column;
         text-align: center;
       }
-      
       .hero h1 {
         font-size: 36px;
+      }
+      .contact-link {
+        font-size: 14px; /* Slightly smaller text on mobile */
       }
     }
   </style>
@@ -259,7 +283,7 @@
 
   <section class="hero">
     <h1>Hello, I'm <strong>Eduardo A. Valdez</strong></h1>
-    <h2>4th Year BSIT Student & Creative Designer</h2>
+    <h2>Creative Designer & IT Student</h2>
     <p>Based in Natividad, Pangasinan. I am passionate about technology, web development, and creating amazing digital experiences.</p>
   </section>
 
@@ -268,16 +292,13 @@
     
     <div class="about-text">
       <h2>About Me</h2>
-      <h4>Bachelor of Science in Information Technology</h4>
+      <h4>4th Year BS Information Technology</h4>
       <p>
-        I am currently a 4th-year student at <strong>Pangasinan State University (PSU)</strong>, major in MOBILE and WEB Technology. 
+        I am currently a 4th-year student at <strong>Pangasinan State University (PSU)</strong>. 
         With a strong foundation in IT concepts and a creative flair for design, I strive to build applications that are both functional and visually appealing.
       </p>
       <p>
-        <strong>Address:</strong> Natividad, Pangasinan
-      </p>
-       <p>
-        <strong>Languages:</strong>Tagalog, English, Ilocano and Hiligaynon
+        I specialize in web development, video editing, and graphic design, always looking for new challenges to improve my skills.
       </p>
     </div>
   </section>
@@ -297,12 +318,8 @@
       </div>
 
       <div class="skill-box">
-        <h3> Mobile Development</h3>
-        <p>Building mobile applications.</p>
-      </div>
-<div class="skill-box">
-        <h3> Video and Photo Editing</h3>
-        <p>Creating diffirent styles in video and photo editing.</p>
+        <h3>Video Editing</h3>
+        <p>Editing creative videos for vlogs, highlights, and promotions.</p>
       </div>
 
     </div>
@@ -315,9 +332,38 @@
       <div class="hobby-item">Graphic Designing</div>
       <div class="hobby-item">Online Gaming</div>
       <div class="hobby-item">Watching Tech Tutorials</div>
-      <div class="hobby-item">Music, Anime & Movies</div>
+      <div class="hobby-item">Music & Movies</div>
       <div class="hobby-item">Traveling</div>
     </div>
   </section>
 
-v
+  <section id="contact" class="contact-section">
+    <h2 class="section-title">Get In Touch</h2>
+    <p>Feel free to reach out to me for projects or collaborations.</p>
+    
+    <div class="contact-info">
+      
+      <a href="https://www.facebook.com/evaldez154" class="contact-link" target="_blank">
+        <i class="fab fa-facebook"></i>
+        <span>Eduardo Valdez</span>
+      </a>
+
+      <a href="mailto:eduardoavaldezjr@gmail.com" class="contact-link">
+        <i class="fas fa-envelope"></i>
+        <span>eduardoavaldezjr@gmail.com</span>
+      </a>
+
+      <div class="contact-link" style="cursor: default;">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Natividad, Pangasinan</span>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Eduardo A. Valdez. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
