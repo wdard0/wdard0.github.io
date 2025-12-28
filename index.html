@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Valdez Portforlio</title>
+  <title>Valdez Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
   <style>
     * {
       margin: 0;
@@ -16,14 +18,20 @@
       font-family: 'Poppins', sans-serif;
       background-color: #1f1f2f;
       color: #fff;
+      overflow-x: hidden;
     }
 
+    /* Header */
     header {
       background: #29293d;
-      padding: 40px 10%;
+      padding: 20px 10%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     }
 
     .logo {
@@ -35,10 +43,17 @@
     nav a {
       color: #fff;
       text-decoration: none;
-      margin: 0 15px;
+      margin-left: 20px;
       font-weight: 500;
+      font-size: 14px;
+      transition: color 0.3s;
     }
 
+    nav a:hover {
+      color: #ff4d4d;
+    }
+
+    /* Hero Section */
     .hero {
       text-align: center;
       padding: 100px 10%;
@@ -53,149 +68,278 @@
     .hero h2 {
       color: #00ffcc;
       margin-bottom: 20px;
+      font-size: 22px;
+      font-weight: 400;
     }
 
     .hero p {
       color: #ccc;
       max-width: 600px;
       margin: auto;
+      line-height: 1.6;
     }
 
-    .hero button {
-      background: #ff4d4d;
-      color: white;
-      border: none;
-      padding: 10px 25px;
-      margin-top: 20px;
-      font-size: 16px;
-      border-radius: 25px;
-      cursor: pointer;
-    }
-
-    .features {
-      display: flex;
-      justify-content: space-around;
-      text-align: center;
-      padding: 50px 10%;
-      background: #202030;
-    }
-
-    .feature-item h3 {
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-
+    /* About Section */
     .about-section {
       display: flex;
       align-items: center;
-      padding: 60px 10%;
-      gap: 40px;
+      justify-content: center;
+      padding: 80px 10%;
+      gap: 50px;
+      flex-wrap: wrap;
+      background: #202030;
     }
 
-    .about-text {
-      max-width: 50%;
-    }
-
-    .about-text h2 {
-      color: #ff4d4d;
-      margin-bottom: 15px;
-    }
-
-    .about-text p {
-      color: #ccc;
-    }
-
-    .highlight-box {
-      background: #333;
-      padding: 20px;
-      border-radius: 12px;
-      margin-top: 20px;
-      display: inline-block;
-    }
-
-    .portfolio-section {
-      text-align: center;
-      padding: 60px 10%;
-      background: #181828;
-    }
-
-    .portfolio-section h2 {
-      margin-bottom: 20px;
-      color: #ff4d4d;
-    }
-
-    .portfolio-section p {
-      color: #aaa;
-    }
-    
-    /* New styles for the round passport-sized image */
     .profile-image {
-      width: 150px; /* Approximately 2 inches at standard screen resolution */
-      height: 150px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       object-fit: cover;
       border: 5px solid #ff4d4d;
       box-shadow: 0 0 20px rgba(255, 77, 77, 0.3);
     }
+
+    .about-text {
+      max-width: 600px;
+    }
+
+    .about-text h2 {
+      color: #ff4d4d;
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+
+    .about-text h4 {
+      color: orange;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    .about-text p {
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+
+    /* Skills Section */
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 50px;
+      color: #ff4d4d;
+    }
+
+    .skills-section {
+      padding: 60px 10%;
+      background: #181828;
+      text-align: center;
+    }
+
+    .skills-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .skill-box {
+      background: #29293d;
+      padding: 30px;
+      border-radius: 12px;
+      width: 250px;
+      transition: transform 0.3s;
+      border-bottom: 3px solid #00ffcc;
+    }
+
+    .skill-box:hover {
+      transform: translateY(-10px);
+    }
+
+    .skill-box h3 {
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .skill-box p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    /* Hobbies Section */
+    .hobbies-section {
+      padding: 60px 10%;
+      background: #1f1f2f;
+      text-align: center;
+    }
+
+    .hobbies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .hobby-item {
+      background: #2e2e4d;
+      padding: 20px;
+      border-radius: 10px;
+      color: #00ffcc;
+      font-weight: bold;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 60px 10%;
+      background: #10101a;
+      text-align: center;
+    }
+
+    .contact-info {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      background: #333;
+      padding: 15px 30px;
+      border-radius: 50px;
+      width: fit-content;
+      transition: background 0.3s;
+    }
+
+    .contact-link:hover {
+      background: #ff4d4d;
+    }
+
+    .contact-link i {
+      font-size: 24px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #555;
+      font-size: 12px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .hero h1 {
+        font-size: 36px;
+      }
+    }
   </style>
 </head>
 <body>
+
   <header>
     <div class="logo">Wardz</div>
-    
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <section class="hero">
-    <h1>Hello, I'm <strong> Eduardo A. Valdez</strong></h1>
-    <h2>A Creative Designer From Natividad Pangasinan</h2>
-    <p>I'm a creative designer based in Natividad Pangasinan, and I'm very passionate and dedicated to my work.</p>
- <a href="portfolio.html" style="
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: red;
-  color: white;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-">
-  Portfolio
-</a>
-
-
+    <h1>Hello, I'm <strong>Eduardo A. Valdez</strong></h1>
+    <h2>4th Year BSIT Student & Creative Designer</h2>
+    <p>Based in Natividad, Pangasinan. I am passionate about technology, web development, and creating amazing digital experiences.</p>
   </section>
 
-  <section class="features">
-    <div class="feature-item">
-      <h3>Pixel Perfect</h3>
-      <p>Methods for designing websites that work well on desktop in responsive and adaptive design.</p>
-    </div>
-    <div class="feature-item">
-      <h3>High Quality</h3>
-      <p>Methods for designing websites that work well on desktop in responsive and adaptive design.</p>
-    </div>
-    <div class="feature-item">
-      <h3>Awesome Idea</h3>
-      <p>Methods for designing websites that work well on desktop in responsive and adaptive design.</p>
-    </div>
-  </section>
-
-  <section class="about-section">
-    <img src="prof.jpg" alt="Profile photo of Eduardo A. Valdez" class="profile-image">
+  <section id="about" class="about-section">
+    <img src="prof.jpg" alt="Eduardo Valdez" class="profile-image">
+    
     <div class="about-text">
-      <h2>I'm a Designer</h2>
-      <h3>I Can Design Anything You Want</h3>
-      <p>Hello there! I'm a web designer, and I'm very passionate and dedicated to my work. With a years experience as a professional web developer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the design process, from discussion and collaboration.</p>
-      
-      <br><br>
+      <h2>About Me</h2>
+      <h4>Bachelor of Science in Information Technology</h4>
+      <p>
+        I am currently a 4th-year student at <strong>Pangasinan State University (PSU)</strong>, majoring in Technology. 
+        With a strong foundation in IT concepts and a creative flair for design, I strive to build applications that are both functional and visually appealing.
+      </p>
+      <p>
+        <strong>Address:</strong> Natividad, Pangasinan
+      </p>
     </div>
   </section>
 
-  <section class="portfolio-section">
-    <h2>Portfolio</h2>
-    <h3>My Amazing Works</h3>
-    <p>Most common methods for designing websites that work well on desktop is responsive and adaptive design</p>
+  <section id="skills" class="skills-section">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skills-container">
+      
+      <div class="skill-box">
+        <h3>Web Design</h3>
+        <p>Creating responsive layouts using HTML, CSS, and modern frameworks.</p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Graphic Design</h3>
+        <p>Designing user interfaces, logos, and creative assets.</p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Development</h3>
+        <p>Building functional web applications and problem-solving.</p>
+      </div>
+
+    </div>
   </section>
+
+  <section id="hobbies" class="hobbies-section">
+    <h2 class="section-title">My Hobbies</h2>
+    <div class="hobbies-grid">
+      <div class="hobby-item">Coding & Programming</div>
+      <div class="hobby-item">Graphic Designing</div>
+      <div class="hobby-item">Online Gaming</div>
+      <div class="hobby-item">Watching Tech Tutorials</div>
+      <div class="hobby-item">Music & Movies</div>
+      <div class="hobby-item">Traveling</div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2 class="section-title">Get In Touch</h2>
+    <p>Feel free to reach out to me for projects or collaborations.</p>
+    
+    <div class="contact-info">
+      
+      <a href="https://www.facebook.com/" target="_blank" class="contact-link">
+        <i class="fab fa-facebook"></i>
+        <span>Eduardo Valdez</span>
+      </a>
+
+      <a href="mailto:your-email@example.com" class="contact-link">
+        <i class="fas fa-envelope"></i>
+        <span>Send me an Email</span>
+      </a>
+
+      <div class="contact-link" style="cursor: default; background: transparent; border: 1px solid #333;">
+        <i class="fas fa-map-marker-alt" style="color: #ff4d4d;"></i>
+        <span>Natividad, Pangasinan</span>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Eduardo A. Valdez. All Rights Reserved.
+  </footer>
+
 </body>
 </html>
