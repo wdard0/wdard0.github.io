@@ -18,7 +18,7 @@
       font-family: 'Poppins', sans-serif;
       background-color: #1f1f2f;
       color: #fff;
-      overflow-x: hidden; /* Prevents horizontal scroll */
+      overflow-x: hidden;
     }
 
     /* --- Header --- */
@@ -165,7 +165,7 @@
       font-size: 14px;
     }
 
-    /* --- Hobbies Section --- */
+    /* --- Hobbies Section (FIXED: CENTERED) --- */
     .hobbies-section {
       padding: 60px 10%;
       background: #1f1f2f;
@@ -173,8 +173,10 @@
     }
 
     .hobbies-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      /* Pinalitan ko ito ng Flexbox para mag-center ang last row */
+      display: flex;
+      justify-content: center; /* Gitna lahat */
+      flex-wrap: wrap; /* Bumaba pag wala nang space */
       gap: 20px;
       max-width: 1000px;
       margin: 0 auto;
@@ -187,13 +189,20 @@
       color: #00ffcc;
       font-weight: bold;
       transition: background 0.3s;
+      
+      /* Fixed width para pantay-pantay ang laki ng box */
+      width: 220px; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80px; /* Fixed height */
     }
     
     .hobby-item:hover {
       background: #3e3e5d;
     }
 
-    /* --- Contact Section (Updated for Uniformity) --- */
+    /* --- Contact Section (FIXED: BUTTON STYLE) --- */
     .contact-section {
       padding: 60px 10%;
       background: #10101a;
@@ -208,20 +217,19 @@
       align-items: center;
     }
 
-    /* Uniform Style for ALL contact items (FB, Email, Address) */
+    /* Ito ang magpapaganda sa buttons */
     .contact-link {
       display: flex;
       align-items: center;
-      justify-content: center; /* Centers text inside */
+      justify-content: center; 
       gap: 15px;
       
-      /* Fixed Width for uniformity */
       width: 100%;
       max-width: 400px;
       padding: 15px 20px;
       
       background: #202030;
-      color: #ffffff;
+      color: #ffffff !important; /* Force white text */
       border: 1px solid #333;
       border-radius: 50px;
       
@@ -232,10 +240,9 @@
 
     .contact-link i {
       font-size: 20px;
-      color: #ff4d4d; /* Red Icon */
+      color: #ff4d4d; 
     }
 
-    /* Hover effects for clickable links */
     a.contact-link:hover {
       background: #ff4d4d;
       border-color: #ff4d4d;
@@ -262,9 +269,6 @@
       }
       .hero h1 {
         font-size: 36px;
-      }
-      .contact-link {
-        font-size: 14px; /* Slightly smaller text on mobile */
       }
     }
   </style>
@@ -311,13 +315,6 @@
         <h3>Web Design</h3>
         <p>Creating responsive layouts using HTML, CSS, and modern frameworks.</p>
       </div>
-
-      
-      <div class="skill-box">
-        <h3>Mobile Development</h3>
-        <p>Creating Applications using android studio and flutter.</p>
-      </div>
-
 
       <div class="skill-box">
         <h3>Graphic Design</h3>
